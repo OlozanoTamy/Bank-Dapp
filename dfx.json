@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "bank_backend": {
+      "main": "src/bank_backend/main.mo",
+      "type": "motoko"
+    },
+    "bank_frontend": {
+      "dependencies": [
+        "bank_backend"
+      ],
+      "source": [
+        "src/bank_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "bank_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
